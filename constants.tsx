@@ -19,6 +19,40 @@ export const SIDEBAR_ITEMS: SidebarItemType[] = [
     { id: 'settings', label: 'Configuración', icon: <SettingsIcon /> },
 ];
 
+export const ASSETS_DATA = [
+    {
+        id: 'usdt',
+        name: 'USDT',
+        fullName: 'Tether USD',
+        amount: '0,00',
+        cost: '$1,0000',
+        pnl: '+0,00%',
+        pnlColor: 'text-green-400',
+        icon: <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-xs">T</div>
+    },
+    {
+        id: 'btc',
+        name: 'BTC',
+        fullName: 'Bitcoin',
+        amount: '0,00000000',
+        cost: '$43,250.50',
+        pnl: '+2,45%',
+        pnlColor: 'text-green-400',
+        icon: <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xs">₿</div>
+    },
+    {
+        id: 'eth',
+        name: 'ETH',
+        fullName: 'Ethereum',
+        amount: '0,0000',
+        cost: '$2,650.75',
+        pnl: '-1,20%',
+        pnlColor: 'text-red-400',
+        icon: <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xs">Ξ</div>
+    }
+];
+];
+
 export const ASSETS_DATA: AssetType[] = [
     {
         id: 'bonk',
