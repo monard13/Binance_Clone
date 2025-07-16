@@ -1,25 +1,5 @@
 import React from 'react';
 
-const ModalCard = ({ title, children }: { title: string; children: React.ReactNode }) => (
-    <div className="bg-[#2a2a2a] p-4 rounded-lg mb-4">
-        <h3 className="text-lg font-semibold mb-3 editable-text" contentEditable="true" suppressContentEditableWarning>
-            {title}
-        </h3>
-        {children}
-    </div>
-);
-
-const AssetDistributionRow = ({ label, value }: { label: string; value: string }) => (
-    <div className="flex justify-between items-center py-2 border-b border-[#3a3a3a] last:border-b-0">
-        <span className="text-gray-400 editable-text" contentEditable="true" suppressContentEditableWarning>
-            {label}
-        </span>
-        <span className="editable-text" contentEditable="true" suppressContentEditableWarning>
-            {value} USDT
-        </span>
-    </div>
-);
-
 const UsdtModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
     if (!isOpen) return null;
 
@@ -48,30 +28,24 @@ const UsdtModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }
                         </div>
                     </div>
 
-                    <ModalCard title="Distribución de Activos">
-                        <AssetDistributionRow label="Disponible" value="0,00" />
-                        <AssetDistributionRow label="Retirando" value="0,00" />
-                        <AssetDistributionRow label="Órdenes Spot" value="0,00" />
-                        <AssetDistributionRow label="Órdenes de Conversión" value="0,00" />
-                        <AssetDistributionRow label="Congelado" value="0,00" />
-                    </ModalCard>
+                    <div className="space-y-4">
+                        <button className="w-full bg-[#fcd535] text-black py-3 rounded-lg font-semibold hover:bg-[#e0b92d] transition-colors">
+                            Depositar
+                        </button>
+                        <button className="w-full bg-[#3c3c3c] text-white py-3 rounded-lg font-semibold hover:bg-[#4c4c4c] transition-colors">
+                            Retirar
+                        </button>
+                        <button className="w-full bg-[#3c3c3c] text-white py-3 rounded-lg font-semibold hover:bg-[#4c4c4c] transition-colors">
+                            Transferir
+                        </button>
+                    </div>
 
-                    <ModalCard title="Historial">
-                        <div className="flex justify-between items-center text-sm mb-2">
-                            <span className="editable-text" contentEditable="true" suppressContentEditableWarning>
-                                Transferencia
-                            </span>
-                            <span className="text-gray-400 hover:text-white cursor-pointer editable-text" contentEditable="true" suppressContentEditableWarning>
-                                Todo
-                            </span>
+                    <div className="mt-6 pt-4 border-t border-[#3c3c3c]">
+                        <h3 className="text-sm font-semibold mb-2">Historial Reciente</h3>
+                        <div className="text-sm text-gray-400">
+                            No hay transacciones recientes
                         </div>
-                        <div className="text-sm editable-text" contentEditable="true" suppressContentEditableWarning>
-                            Funding
-                        </div>
-                        <div className="text-xs text-gray-400 editable-text" contentEditable="true" suppressContentEditableWarning>
-                            28/04/2025 18:45
-                        </div>
-                    </ModalCard>
+                    </div>
                 </div>
             </div>
         </div>

@@ -19,6 +19,40 @@ export const SIDEBAR_ITEMS: SidebarItemType[] = [
     { id: 'settings', label: 'Configuración', icon: <SettingsIcon /> },
 ];
 
+export const ASSETS_DATA: AssetType[] = [
+    {
+        id: 'usdt',
+        name: 'USDT',
+        fullName: 'Tether USD',
+        amount: '0,00 USDT',
+        cost: '≈ $0,00',
+        pnl: '+0,00%',
+        pnlColor: 'text-green-400',
+        icon: <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white text-xs font-bold">T</div>
+    },
+    {
+        id: 'btc',
+        name: 'BTC',
+        fullName: 'Bitcoin',
+        amount: '0,00000000 BTC',
+        cost: '≈ $0,00',
+        pnl: '+0,00%',
+        pnlColor: 'text-green-400',
+        icon: <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white text-xs font-bold">₿</div>
+    },
+    {
+        id: 'eth',
+        name: 'ETH',
+        fullName: 'Ethereum',
+        amount: '0,00000000 ETH',
+        cost: '≈ $0,00',
+        pnl: '+0,00%',
+        pnlColor: 'text-green-400',
+        icon: <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs font-bold">Ξ</div>
+    }
+];
+];
+
 export const ASSETS_DATA = [
     {
         id: 'usdt',
