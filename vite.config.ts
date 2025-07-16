@@ -10,6 +10,7 @@ export default defineConfig({
     allowedHosts: 'all',
     hmr: {
       clientPort: 443
-    }
+    },
+    origin: 'https://5e285479-e0e7-4298-85b8-27b3f8de8ddc-00-1gzyr8xgkxm9m.kirk.replit.dev'
   }
 })
