@@ -1,0 +1,6 @@
+{
+  "name": "Binance PWA Clone",
+  "description": "A React-based replica of a Binance wallet dashboard interface, showcasing a dark theme, asset overview, and interactive components. This application is built with TypeScript and styled using Tailwind CSS for a modern and responsive user experience.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
