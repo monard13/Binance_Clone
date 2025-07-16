@@ -39,36 +39,3 @@ const Sidebar = ({ activeItem, setActiveItem }: SidebarProps) => {
 }
 
 export default Sidebar;
-import React from 'react';
-import { SIDEBAR_ITEMS } from '../constants';
-
-const Sidebar = ({ activeItem, setActiveItem }: { 
-    activeItem: string; 
-    setActiveItem: (item: string) => void; 
-}) => {
-    return (
-        <aside className="w-full md:w-64 bg-[#2c2c2c] min-h-screen">
-            <div className="p-4">
-                <h2 className="text-lg font-semibold mb-4 text-[#fcd535]">Menú</h2>
-                <nav>
-                    {SIDEBAR_ITEMS.map(item => (
-                        <button
-                            key={item.id}
-                            onClick={() => setActiveItem(item.id)}
-                            className={`w-full flex items-center p-3 mb-2 rounded-lg transition-colors duration-200 ${
-                                activeItem === item.id 
-                                    ? 'bg-[#fcd535] text-black' 
-                                    : 'text-gray-300 hover:bg-[#3c3c3c] hover:text-white'
-                            }`}
-                        >
-                            {item.icon}
-                            <span className="text-sm">{item.label}</span>
-                        </button>
-                    ))}
-                </nav>
-            </div>
-        </aside>
-    );
-};
-
-export default Sidebar;
