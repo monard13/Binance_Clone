@@ -1,3 +1,4 @@
+
 import React, { useState, useCallback } from 'react';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
@@ -6,7 +7,7 @@ import UsdtModal from './components/UsdtModal';
 import { SIDEBAR_ITEMS } from './constants';
 
 const App = () => {
-    const [activeItem, setActiveItem] = useState<string>(SIDEBAR_ITEMS[0].id);
+    const [activeItem, setActiveItem] = useState<string>('spot');
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
     const handleOpenModal = useCallback(() => {
@@ -18,9 +19,9 @@ const App = () => {
     }, []);
 
     return (
-        <div className="bg-[#1a1a1a] text-[#e0e0e0] min-h-screen">
+        <div className="bg-[#181a20] text-white min-h-screen">
             <Navbar />
-            <main className="pt-[60px] md:pt-[76px] lg:pt-[60px] flex flex-col md:flex-row max-w-[1400px] mx-auto">
+            <main className="pt-16 flex">
                 <Sidebar activeItem={activeItem} setActiveItem={setActiveItem} />
                 <Content onUsdtClick={handleOpenModal} />
             </main>
