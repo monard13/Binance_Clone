@@ -7,7 +7,7 @@ const Content = ({ onUsdtClick }: { onUsdtClick: () => void }) => {
             id: 'cop',
             name: 'COP',
             fullName: 'Colombian...',
-            icon: '🇨🇴',
+            icon: <div className="w-8 h-8 rounded-full bg-yellow-500 flex items-center justify-center text-white font-bold text-lg">$</div>,
             amount: '0.006',
             value: '$0.00',
             available: '0.006',
@@ -154,8 +154,14 @@ const Content = ({ onUsdtClick }: { onUsdtClick: () => void }) => {
                         onClick={asset.id === 'usdt' ? onUsdtClick : undefined}
                     >
                         <div className="flex items-center">
-                            <div className="w-8 h-8 rounded-full bg-[#fcd535] flex items-center justify-center text-black font-bold text-sm mr-3">
-                                {asset.icon}
+                            <div className="mr-3">
+                                {typeof asset.icon === 'string' ? (
+                                    <div className="w-8 h-8 rounded-full bg-[#fcd535] flex items-center justify-center text-black font-bold text-sm">
+                                        {asset.icon}
+                                    </div>
+                                ) : (
+                                    asset.icon
+                                )}
                             </div>
                             <div>
                                 <div className="text-[#eaecef] font-medium">{asset.name}</div>
