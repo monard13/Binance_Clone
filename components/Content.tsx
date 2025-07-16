@@ -17,7 +17,11 @@ const Content = ({ onUsdtClick }: { onUsdtClick: () => void }) => {
             id: 'usdt',
             name: 'USDT',
             fullName: 'TetherUS',
-            icon: '₮',
+            icon: <div className="w-8 h-8 rounded-full bg-[#26A17B] flex items-center justify-center">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                    <path d="M12 0L24 6v12L12 24L0 18V6L12 0zm0 2.4L2.4 7.2v9.6L12 21.6l9.6-4.8V7.2L12 2.4zm6 6.6v1.2h-3v6h-6v-6H6V9h12zm-9 2.4v2.4h6V10.8H9z"/>
+                </svg>
+            </div>,
             amount: '0.00',
             value: '$0.00',
             available: '0.00',
@@ -27,7 +31,11 @@ const Content = ({ onUsdtClick }: { onUsdtClick: () => void }) => {
             id: 'bnb',
             name: 'BNB',
             fullName: 'BNB',
-            icon: '🔸',
+            icon: <div className="w-8 h-8 rounded-full bg-[#F3BA2F] flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                    <path d="M6 9l6-6 6 6-2.12 2.12L12 7.24l-3.88 3.88L6 9zm6 1.5l2.12-2.12L16.24 12l-2.12 2.12L12 10.5zM7.76 12l2.12-2.12L12 10.5l2.12 2.12L12 14.76 9.88 12 7.76 12zm4.24 1.5l2.12 2.12L18 15l-6 6-6-6 2.12-2.12L12 16.76z"/>
+                </svg>
+            </div>,
             amount: '0.00',
             value: '$0.00',
             available: '0.00',
@@ -37,7 +45,14 @@ const Content = ({ onUsdtClick }: { onUsdtClick: () => void }) => {
             id: 'eth',
             name: 'ETH',
             fullName: 'Ethereum',
-            icon: 'Ξ',
+            icon: <div className="w-8 h-8 rounded-full bg-[#627EEA] flex items-center justify-center">
+                <svg width="14" height="20" viewBox="0 0 14 20" fill="white">
+                    <path d="M7 0L6.85 0.51v12.89L7 13.57l7-4.06L7 0z"/>
+                    <path d="M7 0L0 9.51l7 4.06V0z"/>
+                    <path d="M7 14.71l-0.15 0.18v5.36L7 20.25l7-9.97L7 14.71z"/>
+                    <path d="M7 20.25v-5.54L0 10.28L7 20.25z"/>
+                </svg>
+            </div>,
             amount: '0.00',
             value: '$0.00',
             available: '0.00',
@@ -47,7 +62,11 @@ const Content = ({ onUsdtClick }: { onUsdtClick: () => void }) => {
             id: 'btc',
             name: 'BTC',
             fullName: 'Bitcoin',
-            icon: '₿',
+            icon: <div className="w-8 h-8 rounded-full bg-[#F7931A] flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c.139-.78-.478-1.201-1.292-1.481l.264-1.06--.645-.161-.257 1.033c-.169-.042-.343-.082-.516-.122l.259-1.04-.645-.161-.264 1.061c-.14-.032-.278-.064-.412-.097l.001-.006-.891-.222-.172.69s.478.11.468.116c.261.065.308.238.3.375l-.3 1.206c.018.005.041.011.067.021l-.068-.017-.421 1.69c-.032.079-.113.198-.296.153.007.009-.468-.117-.468-.117l-.321.74.842.21c.157.039.31.08.461.119l-.267 1.073.644.161.264-1.061c.175.047.344.09.51.13l-.263 1.056.645.161.267-1.071c1.102.209 1.931.124 2.28-.874.282-.804-.014-1.268-.594-1.569.422-.097.739-.375.824-.948zm-1.476 2.071c-.2.803-1.55.369-1.988.26l.355-1.424c.438.109 1.841.325 1.633 1.164zm.2-2.086c-.182.732-1.308.36-1.674.269l.322-1.291c.365.091 1.542.26 1.352 1.022z"/>
+                </svg>
+            </div>,
             amount: '0.00',
             value: '$0.00',
             available: '0.00',
